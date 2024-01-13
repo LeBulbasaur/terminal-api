@@ -1,0 +1,38 @@
+[
+  {
+    "Id": 0,
+    "Name": "/",
+    "Date": 10101000000,
+    "Type": "dir",
+    "ParentId": 0
+  },
+  {
+    "Id": 1,
+    "Name": "home",
+    "Date": 10101000000,
+    "Type": "dir",
+    "ParentId": 0
+  },
+  {
+    "Id": 2,
+    "Name": "bin",
+    "Date": 10101000000,
+    "Type": "dir",
+    "ParentId": 0
+  },
+  {
+    "Id": 3,
+    "Name": "Documents",
+    "Date": 10101000000,
+    "Type": "dir",
+    "ParentId": 0
+  },
+  {
+    "Content": "This is a readme file",
+    "Id": 4,
+    "Name": "README.md",
+    "Date": 10101000000,
+    "Type": "txt",
+    "ParentId": 0
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "T2Xsp8tKse8saPP+7JWrSyxlbnDXm1UPsXl+N6eXwwc=",
+  "Source": "terminal-api",
+  "BasePath": "_content/terminal-api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
