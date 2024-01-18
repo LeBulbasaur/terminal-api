@@ -1,6 +1,5 @@
 using Terminal.Models;
 using Terminal.Services;
-using Terminal.Methods;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Terminal.Controllers;
