@@ -36,3 +36,4 @@
 /Users/bramburek/Projects/terminal-api/bin/Debug/net8.0/Services/systemobjects.json
 /Users/bramburek/Projects/terminal-api/bin/Debug/net8.0/Newtonsoft.Json.dll
 /Users/bramburek/Projects/terminal-api/obj/Debug/net8.0/terminal-api.sourcelink.json
+/Users/bramburek/Projects/terminal-api/bin/Debug/net8.0/HtmlAgilityPack.dll

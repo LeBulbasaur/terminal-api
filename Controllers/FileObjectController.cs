@@ -1,5 +1,6 @@
 using Terminal.Models;
 using Terminal.Services;
+using Terminal.Methods;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Terminal.Controllers;
@@ -20,6 +21,7 @@ public class SystemObjectController : ControllerBase
     [HttpGet("{id}")]
     public ActionResult<SystemObject> Get(int id)
     {
+
         var file = SystemObjectService.Get(id);
 
         if(file == null)

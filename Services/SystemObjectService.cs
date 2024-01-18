@@ -1,5 +1,6 @@
 using Terminal.Models;
 using Newtonsoft.Json;
+using Terminal.Methods;
 
 namespace Terminal.Services;
 
@@ -55,6 +56,7 @@ public static class SystemObjectService
             throw new Exception("File not found");
         }
         SystemObjects[index] = file;
+        Console.WriteLine(file.Name + " " + file.ParentId);
         string output = JsonConvert.SerializeObject(SystemObjects, Formatting.Indented);
         File.WriteAllText("./Services/systemobjects.json", output);
         Console.WriteLine("Updated file with id: " + file.Id);
