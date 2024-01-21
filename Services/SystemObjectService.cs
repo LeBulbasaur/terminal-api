@@ -1,6 +1,5 @@
 using Terminal.Models;
 using Newtonsoft.Json;
-using Terminal.Methods;
 
 namespace Terminal.Services;
 
