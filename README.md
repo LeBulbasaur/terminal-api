@@ -11,7 +11,8 @@ This project is a RESTful API built with .NET Core. It provides endpoints for ma
 - `GET /api/scrape:`: Returns an array with data scraped from my Github profile.
 - `POST /systemobject/postdir`: Creates a new `DirectoryObject`.
 - `POST /systemobject/posttxt`: Creates a new `TextFileObject`.
-- `PUT /systemobject/{id}`: Updates the `DirectoryObject` or `TextFileObject` with the given `id`.
+- `PUT /systemobject/putdir/{id}`: Updates the `DirectoryObject` with the given `id`.
+- `PUT /systemobject/puttxt/{id}`: Updates the `TextFileObject` with the given `id`.
 - `DELETE /systemobject/{id}`: Deletes the `SystemObject` with the given `id`.
 
 ## Usage
