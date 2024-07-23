@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "T0Hvxh7qFbIhPPzMt9ywkVBzgsNB3NFjWf8C8AJNTGUL4sC8rH98V3ku5h5FDJ69k2nzhGb1/3gQbVXtIaMU+g==",
+  "dgSpecHash": "Vc8t4ALKMuc=",
   "success": true,
-  "projectFilePath": "/Users/bramburek/Projects/terminal-api/terminal-api.csproj",
+  "projectFilePath": "/Users/bramburek/Documents/GitHub/terminal-api/terminal-api.csproj",
   "expectedPackageFiles": [
     "/Users/bramburek/.nuget/packages/htmlagilitypack/1.11.57/htmlagilitypack.1.11.57.nupkg.sha512",
     "/Users/bramburek/.nuget/packages/microsoft.aspnetcore.cors/2.2.0/microsoft.aspnetcore.cors.2.2.0.nupkg.sha512",

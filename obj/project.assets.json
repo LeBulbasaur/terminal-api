@@ -1399,11 +1399,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/bramburek/Projects/terminal-api/terminal-api.csproj",
+      "projectUniqueName": "/Users/bramburek/Documents/GitHub/terminal-api/terminal-api.csproj",
       "projectName": "terminal-api",
-      "projectPath": "/Users/bramburek/Projects/terminal-api/terminal-api.csproj",
+      "projectPath": "/Users/bramburek/Documents/GitHub/terminal-api/terminal-api.csproj",
       "packagesPath": "/Users/bramburek/.nuget/packages/",
-      "outputPath": "/Users/bramburek/Projects/terminal-api/obj/",
+      "outputPath": "/Users/bramburek/Documents/GitHub/terminal-api/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/bramburek/.nuget/NuGet/NuGet.Config"
@@ -1412,7 +1412,6 @@
         "net8.0"
       ],
       "sources": {
-        "/usr/local/share/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1425,6 +1424,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -1471,7 +1475,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
