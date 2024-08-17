@@ -1,5 +1,7 @@
 using Terminal.Models;
 using Newtonsoft.Json;
+using System.Linq;
+using System.Runtime.CompilerServices;
 
 namespace Terminal.Services;
 
@@ -16,22 +18,30 @@ public static class SystemObjectService
     public static List<SystemObject> GetAll() => SystemObjects;
     public static SystemObject? Get(int id) => SystemObjects.FirstOrDefault(p => p.Id == id);
 
-    public static void AddDirectory(DirectoryObject file)
+    public static bool AddDirectory(DirectoryObject file)
     {
+        if (SystemObjects.Count() > 32 || file.Name.Length > 12){
+            return false;
+        }
         file.Id = SystemObjects.Max(p => p.Id) + 1;
         SystemObjects.Add(file);
         string output = JsonConvert.SerializeObject(SystemObjects, Formatting.Indented);
         File.WriteAllText("./Services/systemobjects.json", output);
         Console.WriteLine("Added new directory");
+        return true;
     }
 
-    public static void AddTextFile(TextFileObject file)
+    public static bool AddTextFile(TextFileObject file)
     {
+        if (SystemObjects.Count() > 32 || file.Name.Length > 12){
+            return false;
+        }
         file.Id = SystemObjects.Max(p => p.Id) + 1;
         SystemObjects.Add(file);
         string output = JsonConvert.SerializeObject(SystemObjects, Formatting.Indented);
         File.WriteAllText("./Services/systemobjects.json", output);
         Console.WriteLine("Added new text file");
+        return true;
     }
 
     public static void UpdateDIR(DirectoryObject file)
@@ -49,6 +59,9 @@ public static class SystemObjectService
 
         public static void UpdateTXT(TextFileObject file)
     {
+        if (file.Content.Length > 250){
+            return;
+        }
         int index = SystemObjects.FindIndex(p => p.Id == file.Id);
         if(index == -1)
         {
@@ -61,15 +74,20 @@ public static class SystemObjectService
         Console.WriteLine("Updated file with id: " + file.Id);
     }
 
-    public static void Delete(int id)
+    public static bool Delete(int id)
     {
+        string[] ForbiddenNames = ["root", "home", "bin", "Documents", "README.md"];
         int index = SystemObjects.FindIndex(p => p.Id == id);
         if(index == -1)
         {
             throw new Exception("File not found");
         }
+        if(ForbiddenNames.Any(SystemObjects[index].Name.Contains)){
+            return false;
+        }
         SystemObjects[index].DeleteObject(SystemObjects);
         string output = JsonConvert.SerializeObject(SystemObjects, Formatting.Indented);
         File.WriteAllText("./Services/systemobjects.json", output);
+        return true;
     }
 }

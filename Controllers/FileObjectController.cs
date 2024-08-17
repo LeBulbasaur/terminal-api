@@ -1,6 +1,7 @@
 using Terminal.Models;
 using Terminal.Services;
 using Microsoft.AspNetCore.Mvc;
+using System.Runtime.CompilerServices;
 
 namespace Terminal.Controllers;
 
@@ -33,15 +34,21 @@ public class SystemObjectController : ControllerBase
     [HttpPost("postdir")]
     public IActionResult CreateDirectory(DirectoryObject file)
     {
-        SystemObjectService.AddDirectory(file);
-        return CreatedAtAction(nameof(CreateDirectory), new { id = file.Id }, file);
+        bool isAdded = SystemObjectService.AddDirectory(file);
+        if(isAdded){
+            return CreatedAtAction(nameof(CreateDirectory), new { id = file.Id }, file);
+        }
+        return CreatedAtAction(nameof(CreateDirectory), new { error = true });
     }
 
     [HttpPost("posttxt")]
     public IActionResult CreateText(TextFileObject file)
     {
-        SystemObjectService.AddTextFile(file);
-        return CreatedAtAction(nameof(CreateText), new { id = file.Id }, file);
+        bool isAdded = SystemObjectService.AddTextFile(file);
+        if(isAdded){
+            return CreatedAtAction(nameof(CreateText), new { id = file.Id }, file);
+        } 
+        return CreatedAtAction(nameof(CreateText), new {error = true});
     }
 
     // PUT action
@@ -78,8 +85,7 @@ public class SystemObjectController : ControllerBase
             return NotFound();
         }
 
-        SystemObjectService.UpdateTXT(file);           
-
+        SystemObjectService.UpdateTXT(file);
         return NoContent();
     }
 
@@ -94,8 +100,10 @@ public class SystemObjectController : ControllerBase
             return NotFound();
         }
 
-        SystemObjectService.Delete(id);
-
-        return NoContent();
+        bool isRemoved = SystemObjectService.Delete(id);
+        if (isRemoved){
+            return CreatedAtAction(nameof(Delete), new {error = false});
+        }
+        return CreatedAtAction(nameof(Delete), new {error = true});
     }
 }
