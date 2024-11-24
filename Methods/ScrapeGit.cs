@@ -25,7 +25,8 @@ public static class ScrapeGit
             string link = pinned[i].SelectNodes("//a[@class='Link mr-1 text-bold wb-break-word']")[i].Attributes["href"].Value;
             // get span text with description class
             string description = pinned[i].SelectNodes("//p[@class='pinned-item-desc color-fg-muted text-small mt-2 mb-0']")[i].InnerText;
-
+            // get text with coding language used
+            string language = pinned[i].SelectNodes("//span[@itemprop='programmingLanguage']")[i].InnerText;
 
             // remove new lines and spaces from the start of the string
             description = description.Replace("\n", "");
@@ -36,7 +37,7 @@ public static class ScrapeGit
                 description = "No description provided";
             }
 
-            RepositoryModel repositoryModel = new RepositoryModel(name, "https://github.com" + link, description);
+            RepositoryModel repositoryModel = new RepositoryModel(name, "https://github.com" + link, description, language);
             repos.Add(repositoryModel);
         }
         return Task.FromResult(repos);

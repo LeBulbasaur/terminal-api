@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/bramburek/Documents/GitHub/terminal-api/terminal-api.csproj": {}
+    "/home/lebulbasaur/Documents/GitHub/terminal-api/terminal-api.csproj": {}
   },
   "projects": {
-    "/Users/bramburek/Documents/GitHub/terminal-api/terminal-api.csproj": {
+    "/home/lebulbasaur/Documents/GitHub/terminal-api/terminal-api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/bramburek/Documents/GitHub/terminal-api/terminal-api.csproj",
+        "projectUniqueName": "/home/lebulbasaur/Documents/GitHub/terminal-api/terminal-api.csproj",
         "projectName": "terminal-api",
-        "projectPath": "/Users/bramburek/Documents/GitHub/terminal-api/terminal-api.csproj",
-        "packagesPath": "/Users/bramburek/.nuget/packages/",
-        "outputPath": "/Users/bramburek/Documents/GitHub/terminal-api/obj/",
+        "projectPath": "/home/lebulbasaur/Documents/GitHub/terminal-api/terminal-api.csproj",
+        "packagesPath": "/home/lebulbasaur/.nuget/packages/",
+        "outputPath": "/home/lebulbasaur/Documents/GitHub/terminal-api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/bramburek/.nuget/NuGet/NuGet.Config"
+          "/home/lebulbasaur/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -32,11 +32,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -83,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.110/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
